@@ -1,13 +1,18 @@
 package com.jpv.pins_app;
 
+import com.jpv.pins_app.data.Pins;
+
+import java.io.InputStream;
+import java.util.List;
+
 public interface Contract {
 
     interface PinView{
-        void showPins();
+        void showPins(List<Pins> pinsList);
         void showError();
     }
 
     interface PinPresenter{
-        void getPins();
+        void getPins(InputStream inputStream);
     }
 }
