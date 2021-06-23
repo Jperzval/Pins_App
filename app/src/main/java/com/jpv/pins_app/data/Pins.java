@@ -4,7 +4,6 @@ import com.squareup.moshi.Json;
 
 public class Pins {
 
-
     private String  dominant_color;
     private Board board;
     private PinImages images;
