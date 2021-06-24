@@ -33,9 +33,12 @@ public class PinPresenter implements Contract.PinPresenter {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(response -> {
                             viewResponse(response);
-                            Log.d("PinResponse:  ", "getPins: " + response.get(0).getBoard().getName());
+                            Log.d("jess:  ", "getPins: " + response.get(0).getBoard().getName());
                         },
-                        throwable -> pinView.showError());
+                        throwable -> {
+                            pinView.showError();
+                            Log.d("jess", "getPinCall: " + throwable.getMessage());
+                        });
     }
 
     private void viewResponse(List<Pins> response) {

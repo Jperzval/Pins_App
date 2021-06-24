@@ -5,32 +5,32 @@ import com.google.gson.annotations.SerializedName;
 public class PinImages {
 
     @SerializedName("136x136")
-    private String width136;
+    private Width136 width136;
     @SerializedName("236x")
-    private String width236;
+    private Width236 width236;
     @SerializedName("474x")
-    private String width474;
+    private Width474 width474;
     @SerializedName("736x")
-    private String width736;
-    private String orig;
+    private Width736 width736;
+    private WidthOrig orig;
 
-    public String getWidth136() {
+    public Width136 getWidth136() {
         return width136;
     }
 
-    public String getWidth236() {
+    public Width236 getWidth236() {
         return width236;
     }
 
-    public String getWidth474() {
+    public Width474 getWidth474() {
         return width474;
     }
 
-    public String getWidth736() {
+    public Width736 getWidth736() {
         return width736;
     }
 
-    public String getOrig() {
+    public WidthOrig getOrig() {
         return orig;
     }
 }

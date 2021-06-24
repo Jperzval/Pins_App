@@ -26,7 +26,7 @@ public class PinViewHolder extends RecyclerView.ViewHolder {
     public void onBind(final Pins pins){
         pinNameView.setText(pins.getBoard().getName());
         Picasso.get()
-                .load(pins.getImages().getWidth236())
+                .load(pins.getImages().getWidth236().getUrl())
                 .fit()
                 .centerCrop()
                 .into(pinView);
