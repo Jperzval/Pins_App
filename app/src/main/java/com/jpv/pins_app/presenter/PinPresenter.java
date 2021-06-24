@@ -25,15 +25,15 @@ public class PinPresenter implements Contract.PinPresenter {
     }
 
     @Override
-    public void getPins() {
+    public void getPinCall() {
         PinsRetrofit.getRetrofitInstance()
                 .create(PinsFileAPI.class)
-                .getPinsWrapper()
+                .getPins()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(response -> {
-                            viewResponse(response.getPins());
-                            Log.d("PinResponse:  ", "getPins: " + response.getPins());
+                            viewResponse(response);
+                            Log.d("PinResponse:  ", "getPins: " + response.get(0).getBoard().getName());
                         },
                         throwable -> pinView.showError());
     }

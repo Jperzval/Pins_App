@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements Contract.PinView 
         PinsFileAPI api = PinsRetrofit.getRetrofitInstance()
                 .create(PinsFileAPI.class);
         Contract.PinPresenter presenter = new PinPresenter(this, api);
-        presenter.getPins();
+        presenter.getPinCall();
     }
 
     @Override

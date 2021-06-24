@@ -12,6 +12,6 @@ public interface Contract {
     }
 
     interface PinPresenter{
-        void getPins();
+        void getPinCall();
     }
 }
