@@ -1,7 +1,5 @@
 package com.jpv.pins_app.presenter;
 
-import android.util.Log;
-
 import com.jpv.pins_app.Contract;
 import com.jpv.pins_app.data.Pins;
 import com.jpv.pins_app.network.PinsFileAPI;
@@ -31,14 +29,8 @@ public class PinPresenter implements Contract.PinPresenter {
                 .getPins()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(response -> {
-                            viewResponse(response);
-                            Log.d("jess:  ", "getPins: " + response.get(0).getBoard().getName());
-                        },
-                        throwable -> {
-                            pinView.showError();
-                            Log.d("jess", "getPinCall: " + throwable.getMessage());
-                        });
+                .subscribe(response -> viewResponse(response),
+                        throwable -> pinView.showError());
     }
 
     private void viewResponse(List<Pins> response) {

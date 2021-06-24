@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.jpv.pins_app.PinViewHolder;
 import com.jpv.pins_app.R;
 import com.jpv.pins_app.data.Pins;
 

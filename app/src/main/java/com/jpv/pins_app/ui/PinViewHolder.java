@@ -1,4 +1,4 @@
-package com.jpv.pins_app;
+package com.jpv.pins_app.ui;
 
 import android.net.Uri;
 import android.view.View;
@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.jpv.pins_app.R;
 import com.jpv.pins_app.data.Pins;
 import com.squareup.picasso.Picasso;
 
