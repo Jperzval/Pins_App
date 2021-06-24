@@ -5,12 +5,7 @@ public class Pins {
     private Board board;
     private String id;
     private PinImages images;
-
-    public Pins(Board board, String id, PinImages images) {
-        this.board = board;
-        this.id = id;
-        this.images = images;
-    }
+    private Attribution attribution;
 
     public Board getBoard() {
         return board;
@@ -22,5 +17,9 @@ public class Pins {
 
     public PinImages getImages() {
         return images;
+    }
+
+    public Attribution getAttribution() {
+        return attribution;
     }
 }

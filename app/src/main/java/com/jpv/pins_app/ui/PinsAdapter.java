@@ -34,6 +34,14 @@ class PinsAdapter extends RecyclerView.Adapter<PinViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull PinViewHolder holder, int position) {
         holder.onBind(pinsList.get(position));
+        if ((position >= getItemCount() - 1)){
+            load();
+    }
+    }
+
+
+    public void load() {
+
     }
 
     @Override
