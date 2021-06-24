@@ -2,7 +2,6 @@ package com.jpv.pins_app;
 
 import com.jpv.pins_app.data.Pins;
 
-import java.io.InputStream;
 import java.util.List;
 
 public interface Contract {
@@ -13,6 +12,6 @@ public interface Contract {
     }
 
     interface PinPresenter{
-        void getPins(InputStream inputStream);
+        void getPins();
     }
 }
